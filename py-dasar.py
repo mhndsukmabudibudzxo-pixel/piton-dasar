@@ -288,3 +288,4 @@ kampus = {
 }
 
 print(kampus["mahasiswa1"]["nama"])  # Budi
+
