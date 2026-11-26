@@ -207,3 +207,84 @@ def biodata(**data):
         print(f"{key}: {value}")
 
 biodata(nama="Budi", umur=20, kota="Jakarta")
+
+# Membuat list
+buah = ["apel", "jeruk", "mangga"]
+
+# Akses elemen
+print(buah[0])   # apel
+
+# Menambah elemen
+buah.append("pisang")
+
+# Mengubah elemen
+buah[1] = "anggur"
+
+# Menghapus elemen
+buah.remove("mangga")
+
+print(buah)
+
+# Membuat tuple
+warna = ("merah", "hijau", "biru")
+
+# Akses elemen
+print(warna[1])   # hijau
+
+# Tuple tidak bisa diubah
+# warna[0] = "kuning"  # Error
+
+# Tapi bisa diakses dengan loop
+for w in warna:
+    print(w)
+
+# Membuat set
+angka = {1, 2, 3, 3, 4, 5}
+
+print(angka)  # {1, 2, 3, 4, 5} (duplikat otomatis hilang)
+
+# Menambah elemen
+angka.add(6)
+
+# Menghapus elemen
+angka.remove(2)
+
+# Operasi himpunan
+ganjil = {1, 3, 5, 7}
+genap = {2, 4, 6, 8}
+
+print(ganjil | genap)   # Union
+print(ganjil & genap)   # Intersection
+print(ganjil - genap)   # Difference
+
+# Membuat dictionary sederhana
+mahasiswa = {
+    "nama": "Budi",
+    "umur": 20,
+    "jurusan": "Informatika"
+}
+
+print(mahasiswa)
+
+print(mahasiswa["nama"])    # Budi
+print(mahasiswa.get("umur")) # 20
+
+mahasiswa["angkatan"] = 2023   # Menambah data baru
+mahasiswa["umur"] = 21         # Mengubah value umur
+
+print(mahasiswa)
+
+mahasiswa.pop("jurusan")   # Menghapus dengan key
+del mahasiswa["nama"]      # Menghapus dengan del
+
+print(mahasiswa)
+
+for key, value in mahasiswa.items():
+    print(key, ":", value)
+
+kampus = {
+    "mahasiswa1": {"nama": "Budi", "umur": 21},
+    "mahasiswa2": {"nama": "Siti", "umur": 22}
+}
+
+print(kampus["mahasiswa1"]["nama"])  # Budi
